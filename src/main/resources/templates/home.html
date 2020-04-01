@@ -6,21 +6,33 @@
     <title>COVID 19 Confirmed Cases</title>
 </head>
 <body>
-    <h1 class="display-4">COVID 19 Global Confirmed Cases Tracker</h1>
-    <h6>Fetching data from 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).</h6>
-    <p th:text="${testName}"></p>
-<table class="table">
-    <tr>
-        <th>State</th>
-        <th>Country</th>
-        <th>Total cases reported</th>
-    </tr>
-    <tr th:each="locationStat : ${locationStats}">
-        <td th:text="${locationStat.state}"></td>
-        <td th:text="${locationStat.country}"></td>
-        <td th:text="${locationStat.latestTotalCases}">0</td>
+    <div class="container">
+        <h1 class="display-4">COVID 19 Global Confirmed Cases</h1>
+        <h6>Fetching data from 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).</h6>
+        <div class="jumbotron">
+            <h1 class="display-4" th:text="${totalReportedCases}"></h1>
+            <p class="lead">Total Cases Reported Today</p>
+            <hr class="my-4">
+            <p>
+                <span>New Cases reported since previous day: </span>
+                <span th:text="${totalNewCases}"></span>
+            </p>
+        </div>
+        <table class="table">
+            <tr>
+                <th>State</th>
+                <th>Country</th>
+                <th>Total cases reported</th>
+                <th>Changes since last day</th>
+            </tr>
+            <tr th:each="locationStat : ${locationStats}">
+                <td th:text="${locationStat.state}"></td>
+                <td th:text="${locationStat.country}"></td>
+                <td th:text="${locationStat.latestTotalCases}">0</td>
+                <td th:text="${locationStat.diffFromPrevDay}">0</td>
 
-    </tr>
-</table>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
