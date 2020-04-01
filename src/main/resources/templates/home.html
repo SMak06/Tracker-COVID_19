@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>COVID 19 Tracker</title>
+    <title>COVID 19 Confirmed Cases</title>
 </head>
 <body>
+    <h1 class="display-4">COVID 19 Global Confirmed Cases Tracker</h1>
+    <h6>Fetching data from 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).</h6>
     <p th:text="${testName}"></p>
-<table>
+<table class="table">
     <tr>
         <th>State</th>
         <th>Country</th>
