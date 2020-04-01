@@ -4,8 +4,10 @@ package io.Sahil.TrackerCOVID_19;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling //calling the Scheduling method
 public class TrackerCovid19Application {
 
 	public static void main(String[] args) {
