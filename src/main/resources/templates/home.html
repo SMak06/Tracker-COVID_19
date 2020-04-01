@@ -10,12 +10,12 @@
         <h1 class="display-4">COVID 19 Global Confirmed Cases</h1>
         <h6>Fetching data from 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).</h6>
         <div class="jumbotron">
-            <h1 class="display-4" th:text="${totalReportedCases}"></h1>
-            <p class="lead">Total Cases Reported Today</p>
+            <p class="lead">Total cases reported today:</p>
+            <h1 class="display-4 badge badge-danger" style="font-size:6em;" th:text="${totalReportedCases}"></h1>
             <hr class="my-4">
             <p>
                 <span>New Cases reported since previous day: </span>
-                <span th:text="${totalNewCases}"></span>
+                <span class="badge badge-danger"  style="font-size:2.5em;" th:text="${totalNewCases}"></span>
             </p>
         </div>
         <table class="table">
@@ -33,6 +33,7 @@
 
             </tr>
         </table>
+        <p style="text-align: center; color:#808080">Coded by Sahil Makwane (github.com/SMak06), 1 April 2020</p>
     </div>
 </body>
 </html>
